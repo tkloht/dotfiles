@@ -8,4 +8,5 @@ autoload -U compinit
 compinit -i
 
 PATH="/Applications/Postgres.app/Contents/Versions/9.4/bin:$PATH"
+eval `dircolors ~/.dir_colors`
 
