@@ -1,3 +1,4 @@
+execute pathogen#infect()
 syntax enable
 set background=dark
 set number
@@ -6,8 +7,10 @@ set nobackup
 set nowritebackup
 set hlsearch
 set autoindent
-colorscheme desert 
-execute pathogen#infect()
+colorscheme solarized 
+set mouse=a
+set smarttab
+set tabstop=2
 
 au BufRead,BufNewFile *.gant set filetype=groovy
 
