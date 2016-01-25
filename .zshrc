@@ -7,5 +7,9 @@ for config_file ($ZSH/lib/*.zsh) source $config_file
 autoload -U compinit
 compinit -i
 
-PATH="/Applications/Postgres.app/Contents/Versions/9.4/bin:$PATH"
+export NVM_DIR="/Users/tkloht/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
+export PATH=~/bin:$PATH
+
+test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_integration.zsh
