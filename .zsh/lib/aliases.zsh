@@ -26,6 +26,7 @@ else
     alias history='fc -l 1'
 fi
 # List direcory contents
+alias ls="ls --color"
 alias lsa='ls -lah'
 alias l='ls -lah'
 alias ll='ls -lh'

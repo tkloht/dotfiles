@@ -7,6 +7,8 @@ for config_file ($ZSH/lib/*.zsh) source $config_file
 autoload -U compinit
 compinit -i
 
+eval `dircolors ~/.dir_colors`
+
 export NVM_DIR="/Users/tkloht/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
