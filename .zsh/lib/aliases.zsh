@@ -34,3 +34,5 @@ alias la='ls -lAh'
 
 alias afind='ack-grep -il'
 
+alias git-tree="git log --graph --pretty=oneline --abbrev-commit --all --decorate"
+
