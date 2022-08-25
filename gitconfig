@@ -31,3 +31,5 @@
 	email = mail@kloht.com
 [init]
         defaultBranch = main
+[pull]
+	rebase = true

@@ -7,6 +7,7 @@ export LSCOLORS="exfxcxdxbxegedabagacad"
 export CLICOLOR=true
 export EDITOR='vim'
 export HOMEBREW_PREFIX='/opt/homebrew'
+export NEXT_TELEMETRY_DISABLED=1
 
 # Stash your environment variables in ~/.localrc. This means they'll stay out
 # of your main dotfiles repository (which may be public, like this one), but
@@ -55,6 +56,8 @@ zplug load
 # aliases
 alias cra="npx create-react-app"
 alias rn="react-native"
+alias tf="terraform"
+alias p="pnpm"
 
 ## (needs brew install coreutils)
 if $(gls &>/dev/null)
