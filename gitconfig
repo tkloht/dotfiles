@@ -19,13 +19,15 @@
 [difftool]
         prompt = false
 [help]
-        autocorrect = 1
+        autocorrect = prompt
 [push]
         # See `git help config` (search for push.default)
         # for more information on different options of the below setting.
         #
         # Setting to git 2.0 default to suppress warning message
 	default = current
+        autoSetupRemote = true
+        followTags = true
 [user]
 	name = Tobias Kloht
 	email = mail@kloht.com
@@ -33,3 +35,22 @@
         defaultBranch = main
 [pull]
 	rebase = true
+[column]
+        ui = auto
+[branch]
+        sort = -committerdate
+[tag]
+        sort = version:refname
+[fetch]
+        prune = true
+        pruneTags = true
+        all = true
+[commit]
+        verbose = true
+[rerere]
+        enabled = true
+        autoupdate = true
+[rebase]
+        autoSquash = true
+        autoStash = true
+        updateRefs = true
