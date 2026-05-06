@@ -38,7 +38,7 @@ export PATH="$HOMEBREW_PREFIX/bin:./bin:/usr/local/bin:/usr/local/sbin:/Users/tk
 export MANPATH="/usr/local/man:/usr/local/mysql/man:/usr/local/git/man:$MANPATH"
 
 # zplug plugins
-zplug "lukechilds/zsh-nvm"
+# zplug "lukechilds/zsh-nvm"
 zplug mafredri/zsh-async, from:github
 zplug sindresorhus/pure, use:pure.zsh, from:github, as:theme
 
@@ -54,7 +54,6 @@ fi
 zplug load
 
 # aliases
-alias cra="npx create-react-app"
 alias rn="react-native"
 alias tf="terraform"
 alias p="pnpm"
@@ -77,6 +76,44 @@ alias gca='git commit -a'
 alias gco='git checkout'
 alias gcb='git copy-branch-name'
 alias gb='git branch'
-alias gs='git status -sb'
+alias gs='git status'
+alias gds='git diff --staged'
+alias grc='git rebase --continue'
 
 
+
+# pnpm
+export PNPM_HOME="/Users/tobias.kloht/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+
+export PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
+export PUPPETEER_EXECUTABLE_PATH=`which chromium`
+
+export GRPC_PYTHON_BUILD_SYSTEM_OPENSSL=1
+export GRPC_PYTHON_BUILD_SYSTEM_ZLIB=1
+
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="/Users/tobias.kloht/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
+
+
+# Setting fd as the default source for fzf
+export FZF_DEFAULT_COMMAND='fd --type f --strip-cwd-prefix'
+
+# To apply the command to CTRL-T as well
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export PATH="$HOME/.local/bin:$PATH"
+
+eval "$(fnm env --use-on-cd --shell zsh)"
